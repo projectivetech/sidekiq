@@ -187,7 +187,7 @@ module Sidekiq
       end
 
       def clear_for(queue, klass)
-        jobs_by_queue[queue].clear
+        jobs_by_queue[queue.to_s].clear
         jobs_by_worker[klass].clear
       end
 
